@@ -11,6 +11,9 @@ import { Product } from '../model/product.model';
 export class ProductsComponent implements OnInit {
   public products: Array<Product> = [];
   public keyword: string = "";
+  totalPages:number=0;
+  pageSize:number=3;
+  currentPage:number=1;
 
   constructor(private productService: ProductService) {}
 
@@ -19,10 +22,16 @@ export class ProductsComponent implements OnInit {
   }
 
   getProducts() {
-    this.productService.getProducts().subscribe({
-      next: data => {
-        this.products = data;
-        console.log('All products:', this.products); // Log all products
+    this.productService.getProducts(this.currentPage,this.pageSize).subscribe({
+      next: (resp) => {
+        this.products=resp.body as Product[];
+        let totalProducts:number=parseInt(resp.headers.get('X-Total-Count')!);
+        this.totalPages = Math.floor(totalProducts / this.pageSize);
+        // this.totalPages = Math.ceil(totalProducts / this.pageSize);
+        if(totalProducts % this.pageSize !=0){
+          this.totalPages=this.totalPages+1;
+        }
+        console.log("totalPages",this.totalPages);
       },
       error: err => {
         console.error(err);
@@ -67,4 +76,8 @@ export class ProductsComponent implements OnInit {
     });
   }
 
+  handleGotoPage(page: number) {
+    this.currentPage=page;
+    this.getProducts();
+  }
 }

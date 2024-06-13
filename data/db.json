@@ -4,6 +4,54 @@
       "id": "1",
       "name": "Computer",
       "price": 5800,
+      "checked": false
+    },
+    {
+      "id": "2",
+      "name": "Printer",
+      "price": 3200,
+      "checked": true
+    },
+    {
+      "id": "3",
+      "name": "Smart Phone",
+      "price": 600,
+      "checked": true
+    },
+    {
+      "id": "37e4",
+      "name": "Keyboard",
+      "price": 150,
+      "checked": true
+    },
+    {
+      "id": "1",
+      "name": "Computer",
+      "price": 5800,
+      "checked": true
+    },
+    {
+      "id": "2",
+      "name": "Printer",
+      "price": 3200,
+      "checked": false
+    },
+    {
+      "id": "3",
+      "name": "Smart Phone",
+      "price": 600,
+      "checked": true
+    },
+    {
+      "id": "37e4",
+      "name": "Keyboard",
+      "price": 150,
+      "checked": true
+    },
+    {
+      "id": "1",
+      "name": "Computer",
+      "price": 5800,
       "checked": true
     },
     {

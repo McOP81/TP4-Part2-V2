@@ -12,8 +12,8 @@ export class ProductService {
 
   constructor(private http: HttpClient) {}
 
-  public getProducts(): Observable<Array<Product>> {
-    return this.http.get<Array<Product>>(`${this.host}/products`);
+  public getProducts(page : number=1,size : number=3){
+    return this.http.get(`${this.host}/products?_page=${page}&_limit=${size}`,{observe:'response'});
   }
 
   public checkProduct(product: Product): Observable<Product> {
@@ -31,7 +31,7 @@ export class ProductService {
   }
 
   public searchProducts(keyword: string): Observable<Array<Product>> {
-    const url = `${this.host}/products?name=${keyword}`;
+    const url = `${this.host}/products?name_like=${keyword}`;
     return this.http.get<Array<Product>>(url);
   }
 
