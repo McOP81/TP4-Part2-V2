@@ -48,5 +48,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![Screenshot 2024-06-13 161933](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/4078f969-7740-45a3-b731-215378d8deff)
 ![Screenshot 2024-06-13 163027](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/8351a400-cc19-4769-88e5-2adf274de335)
 ![Screenshot 2024-06-13 165656](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/f605fb91-fb53-4cbe-90ff-2ab021ff6fe8)
+![Screenshot 2024-06-13 201059](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/b5ca85b2-953e-4fea-9600-352b2beaea8b)
+![Screenshot 2024-06-13 202431](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/7292c0c2-a376-4c3b-81c0-1867a0a3934a)
+![Screenshot 2024-06-13 204334](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/b41bdf9e-a661-436c-a3fd-26e91fa381db)
+![Screenshot 2024-06-13 211244](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/1cc02e46-57a4-46c9-aa94-042b82147e4d)
+![Screenshot 2024-06-13 211436](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/6feca547-6765-43e2-b9a8-4db9b8f54cf3)
+
+
+
 
 
