@@ -2,6 +2,10 @@
   <div class="card">
     <div class="card-body">
       <h3>Products component</h3>
+      <input class="p-1" type="text" [(ngModel)]="keyword" (input)="searchProducts()">
+      <button (click)="searchProducts()" class="btn btn-outline-success ms-1">
+        <i class="bi bi-search"></i>
+      </button>
       <table class="table">
         <thead>
         <tr>
@@ -17,7 +21,7 @@
           <td>{{product.price}}</td>
           <td>
             <button (click)="handleCheckProduct(product)" class="btn btn-outline-success">
-              <i [class]="product.checked?'bi bi-check':'bi bi-circle'"></i>
+              <i [class]="product.checked ? 'bi bi-check' : 'bi bi-circle'"></i>
             </button>
           </td>
           <td>

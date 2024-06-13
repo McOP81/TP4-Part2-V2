@@ -1,29 +1,38 @@
+// product.service.ts
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {Product} from "../model/product.model";
-
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Product } from '../model/product.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  private  host:string="http://localhost:8089";
+  private host: string = "http://localhost:3000";  // Ensure this matches your json-server port
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  public getProducts():Observable<Array<Product>>{
+  public getProducts(): Observable<Array<Product>> {
     return this.http.get<Array<Product>>(`${this.host}/products`);
   }
-  public checkProduct(product:Product):Observable<Product>{
-    return this.http.patch<Product>(`${this.host}/products/${product.id}`,
-      {checked:!product.checked});
+
+  public checkProduct(product: Product): Observable<Product> {
+    return this.http.patch<Product>(`${this.host}/products/${product.id}`, {
+      checked: !product.checked
+    });
   }
-  public deleteProduct(product:Product){
+
+  public deleteProduct(product: Product): Observable<any> {
     return this.http.delete<any>(`${this.host}/products/${product.id}`);
   }
-  public saveProduct(product: Product):Observable<Product> {
-    return this.http.post<Product>(`${this.host}/products`,
-      product);
+
+  public saveProduct(product: Product): Observable<Product> {
+    return this.http.post<Product>(`${this.host}/products`, product);
   }
+
+  public searchProducts(keyword: string): Observable<Array<Product>> {
+    const url = `${this.host}/products?name=${keyword}`;
+    return this.http.get<Array<Product>>(url);
+  }
+
 }
