@@ -8,14 +8,22 @@ import {Product} from "../model/product.model";
   providedIn: 'root'
 })
 export class ProductService {
+  private  host:string="http://localhost:8089";
 
   constructor(private http:HttpClient) { }
 
   public getProducts():Observable<Array<Product>>{
-    return this.http.get<Array<Product>>("http://localhost:8089/products");
+    return this.http.get<Array<Product>>(`${this.host}/products`);
   }
   public checkProduct(product:Product):Observable<Product>{
-    return this.http.patch<Product>(`http://localhost:8089/products/${product.id}`,
+    return this.http.patch<Product>(`${this.host}/products/${product.id}`,
       {checked:!product.checked});
+  }
+  public deleteProduct(product:Product){
+    return this.http.delete<any>(`${this.host}/products/${product.id}`);
+  }
+  public saveProduct(product: Product):Observable<Product> {
+    return this.http.post<Product>(`${this.host}/products`,
+      product);
   }
 }
