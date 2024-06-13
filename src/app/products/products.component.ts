@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ProductService} from "../services/product.service";
+import {Product} from "../model/product.model";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-products',
@@ -8,11 +10,7 @@ import {ProductService} from "../services/product.service";
   styleUrl: './products.component.css'
 })
 export class ProductsComponent implements OnInit{
-  products :Array<any> =[
-    // {id : 1, name : "Computer", price : 4500, checked : false},
-    // {id : 2, name : "Printer", price : 4500, checked : true},
-    // {id : 3, name : "Phone", price : 4500, checked : false}
-  ];
+  products$! :Observable<Array<Product>>;
   constructor(private productService:ProductService) {
   }
   ngOnInit() {
@@ -20,17 +18,18 @@ export class ProductsComponent implements OnInit{
   }
 
   getProducts(){
-    this.productService.getProducts().subscribe({
-        next : data =>{
-          this.products=data
-        },
-        error : err =>{}
-      })
+    // this.productService.getProducts().subscribe({
+    //     next : data =>{
+    //       this.products=data
+    //     },
+    //     error : err =>{}
+    //   })
+    this.products$=this.productService.getProducts();
   }
 
 
 
-  handleCheckProduct(product: any) {
+  handleCheckProduct(product: Product) {
     this.productService.checkProduct(product).subscribe({
       next : updateProduct => {
         product.checked=!product.checked;
