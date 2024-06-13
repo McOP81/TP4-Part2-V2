@@ -53,8 +53,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![Screenshot 2024-06-13 204334](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/b41bdf9e-a661-436c-a3fd-26e91fa381db)
 ![Screenshot 2024-06-13 211244](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/1cc02e46-57a4-46c9-aa94-042b82147e4d)
 ![Screenshot 2024-06-13 211436](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/6feca547-6765-43e2-b9a8-4db9b8f54cf3)
-
-
-
+![Screenshot 2024-06-13 212544](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/458e603d-72bc-40b6-9510-42fffa356f91)
+![Screenshot 2024-06-13 212548](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/1156ea1e-8d91-4ad8-98c8-7309ba177226)
+![Screenshot 2024-06-13 212843](https://github.com/R-ELKADAH/TP4-Part2-V2/assets/81963279/a477456f-4daf-43da-8f0f-84709ec6fd21)
 
 
